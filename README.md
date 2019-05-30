@@ -54,7 +54,7 @@ const app = multi({
         <nav>
           <a onclick=${e => actionsUp('tick')}>tick</a>
           <a onclick=${e => actionsUp('tack')}>tack</a>
-          <a onclick=${e => actionsUp('tick tack'}>tick tack</a>
+          <a onclick=${e => actionsUp('tick tack')}>tick tack</a>
         </nav>
         <div class="result">${model}</div>
       </section>
@@ -63,7 +63,7 @@ const app = multi({
   run (effect, sources) {
     if (effect === 'TICK') {
       let s = through.obj()
-      process.nextTick(() => s.end('add')
+      process.nextTick(() => s.end('add'))
       return s
     }
     if (effect === 'SCHEDULE_TICK') {
@@ -82,6 +82,11 @@ views().pipe(through.obj((el, _, done) => {
   done()
 }))
 ```
+
+### inspiration
+
+- [`ashaffer/redux-multi`](https://github.com/ashaffer/redux-multi)
+- [`ahdinosaur/inu-multi`](https://github.com/ahdinosaur/inu-multi)
 
 ### authour
 

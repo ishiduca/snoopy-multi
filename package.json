@@ -1,6 +1,6 @@
 {
   "name": "@ishiduca/snoopy-multi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "run multiple effects in @ishiduca/snoopy",
   "main": "multi.js",
   "scripts": {
