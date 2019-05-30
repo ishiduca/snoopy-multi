@@ -25,10 +25,10 @@ test('exApp = multi(app)', t => {
     pipe(
       app.run(data),
       concat(result => {
-        tt.deepEqual(result, expected, `result "${result}"`)
+        tt.is(result, expected, `result "${result}"`)
       }),
       err => {
-        tt.error(err, 'no error')
+        tt.error(err, 'no error and ok [app.run(data).emit("end")]')
         tt.end()
       }
     )
@@ -42,10 +42,10 @@ test('exApp = multi(app)', t => {
     pipe(
       app.run(data),
       concat(result => {
-        tt.deepEqual(result, expected, `result "${result}"`)
+        tt.is(result, expected, `result "${result}"`)
       }),
       err => {
-        tt.error(err, 'no error')
+        tt.error(err, 'no error and ok [app.run(data).emit("end")]')
         tt.end()
       }
     )
@@ -59,10 +59,10 @@ test('exApp = multi(app)', t => {
     pipe(
       app.run(data),
       concat(result => {
-        tt.deepEqual(result, expected, `result "${result}"`)
+        tt.is(result, expected, `result "${result}"`)
       }),
       err => {
-        tt.error(err, 'no error')
+        tt.error(err, 'no error and ok [app.run(data).emit("end")]')
         tt.end()
       }
     )
